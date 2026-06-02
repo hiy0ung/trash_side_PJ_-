@@ -6,7 +6,7 @@ from passlib.context import CryptContext
 # 비밀번호 암호화 관리 객체 생성
 pwd_context = CryptContext(
   schemes=["bcrypt"], # 암호화 알고리즘 지정
-  deprecated="auto" # bcrypt 최신 방식 자동 사용
+  deprecated="auto", # bcrypt 최신 방식 자동 사용
 )
 
 # hash 사용한 비밀번호로 변경하는 함수

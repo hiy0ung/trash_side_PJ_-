@@ -5,7 +5,9 @@ from sqlalchemy.ext.declarative import declarative_base
 # DB 작업용 Session 생성 (DB연결, 쿼리 실행, 저장(commit), 조회(select))
 from sqlalchemy.orm import sessionmaker
 
-DATABASE_URL = "postgre://유저명:비밀번호@localhost:포트번호/DB명"
+# DATABASE_URL = "postgre://유저명:비밀번호@localhost:포트번호/DB명"
+
+DATABASE_URL = "postgresql://hayoung:gkdud989898!@localhost:5432/trash_diary_개인"
 
 # 실제 내 DB 주소로 실제 연결 엔진 생성
 engine = create_engine(DATABASE_URL)

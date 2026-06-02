@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=C:\Users\hyeje\Desktop\python-fast-api-study\FAST_API_study\venv
+set VIRTUAL_ENV=C:\Users\hyeje\Desktop\trash_side_PJ_개인\PJ_개인 작업\venv
 
 if not defined PROMPT set PROMPT=$P$G
 

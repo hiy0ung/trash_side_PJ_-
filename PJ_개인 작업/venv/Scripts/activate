@@ -35,7 +35,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\hyeje\Desktop\python-fast-api-study\FAST_API_study\venv"
+VIRTUAL_ENV="C:\Users\hyeje\Desktop\trash_side_PJ_개인\PJ_개인 작업\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

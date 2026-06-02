@@ -4,8 +4,6 @@
 from datetime import datetime, timedelta
 from jose import jwt
 
-from app.models import user
-
 SECRET_KEY = "SECRET_KEY"
 ALGORITHM = "HS256"
 
@@ -50,12 +48,3 @@ def create_refresh_token(data: dict):
   )
 
   return encoded_jwt
-
-# 로그인 성공하면 토큰 발급
-access_token = create_access_token(
-  {"user_id": user.USER_ID}
-)
-
-refresh_token = create_refresh_token(
-  {"user_id": user.USER_ID}
-)

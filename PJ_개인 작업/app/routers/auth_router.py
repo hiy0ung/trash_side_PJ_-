@@ -3,23 +3,19 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 
-from app.database.connection import SesscionLocal
+from app.database.connection import SessionLocal
 from app.models.user import User
 from app.schemas.user_schema import SignupRequest, LoginRequest
 from app.services.auth_service import signup_service, login_service
 
-from utils.security import verify_password
-from utils.jwt_handler import (
-  create_access_token,
-  create_refresh_token
-)
+from app.utils.security import verify_password
 
 router = APIRouter()
 
 # db 세선 생성/정리 함수
 # 로그인 요청 들어올 때마다 Sesscion 생성 > db 작업 > 자동 close 
 def get_db():
-  db = SesscionLocal()
+  db = SessionLocal()
 
   try:
     yield db

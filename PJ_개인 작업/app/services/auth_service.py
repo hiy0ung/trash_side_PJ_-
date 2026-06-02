@@ -1,11 +1,11 @@
 from fastapi import HTTPException
 
-from models.user import User
+from app.models.user import User
 
-from utils.security import hash_password
-from utils.security import verify_password
+from app.utils.security import hash_password
+from app.utils.security import verify_password
 
-from utils.jwt_handler import (
+from app.utils.jwt_handler import (
   create_access_token,
   create_refresh_token
 )

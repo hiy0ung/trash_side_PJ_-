@@ -1,10 +1,12 @@
-from sqlalchemy import Column, BigInteger, String, DateTime
-from datetime import datetime 
+from sqlalchemy import Column, BigInteger, String, DateTime, Identity
+from datetime import datetime
+
+from app.database.connection import Base
 
 class User(Base):
   __tablename__ = "USER"
 
-  USER_ID = Column(BigInteger, primary_key=True)
+  USER_ID = Column(BigInteger, Identity(start=1), primary_key=True)
   EMAIL = Column(String(30), unique=True, nullable=False)
   PASSWORD = Column(String(255), nullable=False)
   NICKNAME = Column(String(30), nullable=False)
